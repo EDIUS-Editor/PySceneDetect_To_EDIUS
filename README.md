@@ -7,7 +7,7 @@ EDIUS video editing software does not offer any scene or shot change detection t
 
 2. **JSON_to_EDIUS_FCP7XML.py**: A graphical user interface (GUI) for converting JSON files into XML files with a specific structure required by EDIUS Video Editing software.
 
-3. **NEW CMD_SceneDetect_to_EDIUS_FCP7XML.py** This Python script can be run by Command Line or BAT file. It runs PySceneDetect SceneDetect creates scene-cut data in a CSV file, the script then extracts the scene-cut data from the CSV file and uses FFMPEG to extract detailed metadata from the video file. It then combines this information into a JSON structure. Then finally it reads the JSON file and creates an XML file with a specific structure required by EDIUS Video Editing software.
+3. **NEW CMD_SceneDetect_to_EDIUS_FCP7XML.py** This Python script can be run by Command Line or BAT file. It runs PySceneDetect SceneDetect to extract scene-cut data in a CSV file, the script then extracts the scene-cut data from the CSV file and uses FFMPEG to extract detailed metadata from the video file. It then combines this information into a JSON structure. Then finally it reads the JSON file and creates an XML file with a specific structure required by EDIUS Video Editing software.
 
 ### Features
 
