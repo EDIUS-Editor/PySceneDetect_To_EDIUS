@@ -67,10 +67,14 @@ Please try to understand what the script does, and keep in mind I'm not a progra
 2. **JSON_to_EDIUS_FCP7XML**
     Run the JSON_to_EDIUS_FCP7XML.py by double-clicking on the file. The GUI might appear on top of the CMD window, you can move them side-by-side but not after running the script. Use the interface to Select JSON File: Click the "Select JSON File" button and choose the JSON file you want to convert. Select Save Location: Click the "Select Save Location" button and specify the location where you want to save the output XML file. A message box will display "Conversion successful" when done, and the GUI will close.
 
-**CMD_SceneDetect_to_EDIUS_FCP7XML.py**
+**CMD_SceneDetect_to_EDIUS_FCP7XML.py or CMD_SceneDetect_to_EDIUS_FCP7XML.exe**
 This Python script can be run by Command Line or BAT file. 
 ```bash
-python combined_script.py --video_file path/to/video.mp4 --output_dir output_directory -- user_commands_here
+python CMD_SceneDetect_to_EDIUS_FCP7XML.py --video_file path/to/video.mp4 --output_dir output_directory -- user_commands_here
+```
+or the .exe file built by pyinstaller 
+```bash
+CMD_SceneDetect_to_EDIUS_FCP7XML.exe --video_file path/to/video.exe --output_dir output_directory -- user_commands_here
 ```
 The user commands are the same as PySceneDetect SceneDetect commands
 **Examples**
@@ -80,14 +84,14 @@ time --start 10s
 ```
 with full command line
 ```bash
-python combined_script.py --video_file path/to/video.mp4 --output_dir output_directory time --start 10s
+python CMD_SceneDetect_to_EDIUS_FCP7XML.py --video_file path/to/video.mp4 --output_dir output_directory time --start 10s
 ```
 2. Minimum length of any scene. TIMECODE can be specified as number of frames, time in seconds, or timecode. I use this all the time to prevent short clip cuts.
 ```bash
 detect-content --min-scene-len 2s
 ```
 ```bash
-python combined_script.py --video_file path/to/video.mp4 --output_dir output_directory detect-content --min-scene-len 2s
+python CMD_SceneDetect_to_EDIUS_FCP7XML.py --video_file path/to/video.mp4 --output_dir output_directory detect-content --min-scene-len 2s
 ```
 Make sure the output directory exists and is writable. The script runs PySceneDetect SceneDetect creates scene-cut data into a CSV file. The script then extracts the scene-cut data from the CSV file and extracts detailed metadata from the video file using FFMPEG. It then combines this information into a JSON structure. Then finally it reads the JSON file and creates an XML file with a specific structure required by EDIUS Video Editing software.
    
