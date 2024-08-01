@@ -15,7 +15,7 @@ EDIUS video editing software does not offer any scene or shot change detection t
 - **Set Input Video File Path**: The script uses file dialog to open dialogs for selecting a video file. 
 - **Option To Split Video into Separate Clips and Save Images**:  Automatically split the video into separate clips using ffmpeg and save an image of the first and last frame of each detected scene 
 - **Start Time**: Default is set to 0 seconds.
-- **Minimum Scene Length**: Default is set to 1 second.
+- **Minimum Scene Length**: Default is set to 0 seconds. (I use this all the time to prevent short clip cuts and set it at 2 - 3 seconds). 
 - **Command Visibility**: The script enables visibility of the command execution in the CMD window.
 - **Extract the scene-cut data from the CSV file**: The Python script extracts the scene-cut data from the PySceneDetect CSV file and converts data for an EDIUS project.
 - **Metadata Extraction**: Uses FFMPEG to extract detailed metadata from the video file, including:
@@ -76,7 +76,7 @@ or the .exe file built by pyinstaller
 ```bash
 CMD_SceneDetect_to_EDIUS_FCP7XML.exe --video_file path/to/video.exe --output_dir output_directory -- user_commands_here
 ```
-The user commands are the same as PySceneDetect SceneDetect commands
+The user commands are the same as PySceneDetect SceneDetect commands. The command list-scenes will automatically be added so don't duplicate this command.
 **Examples**
 1. Skip the first 10 seconds of the input video: 
 ```bash 
