@@ -55,12 +55,12 @@ EDIUS video editing software does not offer any scene or shot change detection t
 3. **Download and Install FFMPEG FFPROBE**
    The simplest way to install FFMPEG on Windows is to use a package manager like Chocolaty https://www.youtube.com/watch?v=EXOtQPf4s0I or without Chocolaty watch this video https://www.youtube.com/watch?v=JR36oH35Fgg
 4. **Download My Python Files**
-   Download PySceneDetect_GUI.py, PySceneDetect_CSV_to_JSON.py and JSON_to_EDIUS_FCP7XML.py scripts to a folder on your system drive
+   Download GUI files PySceneDetect_GUI.py, and JSON_to_EDIUS_FCP7XML.py or my NEW command line script CMD_SceneDetect_to_EDIUS_FCP7XML.py to a folder on your system drive
    
 ### Usage
 
 **Caution**
-Please try to understand what the script does, and keep in mind I'm not a programmer so there could be bugs. The script works Ok for me but there could be a risk of the script corrupting your video files, so always back up before trying the script.
+Please try to understand what the script does, and keep in mind I'm not a programmer so there could be bugs. The script works Ok for me but there might be a risk of the script corrupting your video files, so always back up before trying the script.
 
 1. **PySceneDetect_GUI_JSON**
    Run the PySceneDetect_GUI.py script by double-clicking on the file. The GUI and CMD window should open. They might appear on top of each other, you can move them side-by-side but not after running the script. Use the interface to select the video file and configure the settings. Click "Start" to begin the scene detection process. PySceneDetect will output a scene cut data in a CSV file and the script will generate the JSON file with metadata. A message box will display "FINISHED" when done, and the GUI will close.
